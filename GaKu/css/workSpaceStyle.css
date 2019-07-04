@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body{
+  position: sticky;
+}
+
+.side-bar {
+  font-family: "ヒラギノ角ゴ Pro W3",
+               "Hiragino Kaku Gothic Pro",
+               "メイリオ", Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+  height: 100vh;
+  width: 20vw;
+  float: left;
+  box-shadow: 4px 0px 4px -1px rgba(0,0,0,0.31);
+  background: #fff;
+  text-align: center;
+}
+
+.side-bar-title {
+  padding-top: 1vh;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.top-bar {
+  height: 10vh;
+  width: 100vw;
+  box-shadow: 0px 3px 3px -3px rgba(0,0,0,0.6);
+}
+
+.workspace {
+  padding-left: 20vw;
+  height: 90vh;
+  width: 80vw;
+}
+
+.workspace-title {
+  width: 10vw;
+  height: 10vh;
+  box-shadow:  2px 1px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+#workspace-canvas {
+  z-index: 1;
+  margin-left: 2px;
+  position:absolute;
+  top: 10vh;
+  left: 30vw;
+  width: 69.85vw;
+  height: 90vh;
+}
+
+.player-button {
+  position:absolute;
+  margin: 0.5vw;
+  margin-left: 2vw;
+  padding: 4vh;
+  background-size:contain;
+  background-repeat: no-repeat;
+  transition: 0.1s;
+}
+
+.player-button:hover {
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+  transition: 0.1s;
+}
+
+.play-logo {
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiPgo8Zz4KCTxwYXRoIGQ9Ik00NS41NjMsMjkuMTc0bC0yMi0xNWMtMC4zMDctMC4yMDgtMC43MDMtMC4yMzEtMS4wMzEtMC4wNThDMjIuMjA1LDE0LjI4OSwyMiwxNC42MjksMjIsMTV2MzAgICBjMCwwLjM3MSwwLjIwNSwwLjcxMSwwLjUzMywwLjg4NEMyMi42NzksNDUuOTYyLDIyLjg0LDQ2LDIzLDQ2YzAuMTk3LDAsMC4zOTQtMC4wNTksMC41NjMtMC4xNzRsMjItMTUgICBDNDUuODM2LDMwLjY0LDQ2LDMwLjMzMSw0NiwzMFM0NS44MzYsMjkuMzYsNDUuNTYzLDI5LjE3NHogTTI0LDQzLjEwN1YxNi44OTNMNDMuMjI1LDMwTDI0LDQzLjEwN3oiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik0zMCwwQzEzLjQ1OCwwLDAsMTMuNDU4LDAsMzBzMTMuNDU4LDMwLDMwLDMwczMwLTEzLjQ1OCwzMC0zMFM0Ni41NDIsMCwzMCwweiBNMzAsNThDMTQuNTYxLDU4LDIsNDUuNDM5LDIsMzAgICBTMTQuNTYxLDIsMzAsMnMyOCwxMi41NjEsMjgsMjhTNDUuNDM5LDU4LDMwLDU4eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+}
+
+.stop-logo {
+  background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIyNTZweCIgaGVpZ2h0PSIyNTZweCI+CjxnPgoJPHBhdGggZD0iTTE2LDQ0aDI4VjE2SDE2VjQ0eiBNMTgsMThoMjR2MjRIMThWMTh6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNMzAsMEMxMy40NTgsMCwwLDEzLjQ1OCwwLDMwczEzLjQ1OCwzMCwzMCwzMHMzMC0xMy40NTgsMzAtMzBTNDYuNTQyLDAsMzAsMHogTTMwLDU4QzE0LjU2MSw1OCwyLDQ1LjQzOSwyLDMwICAgUzE0LjU2MSwyLDMwLDJzMjgsMTIuNTYxLDI4LDI4UzQ1LjQzOSw1OCwzMCw1OHoiIGZpbGw9IiMwMDAwMDAiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+}
+
+.search-box {
+  margin-top: 2vh;
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  border: 1px solid #aaa;
+  color: #fff;
+  opacity: .7;
+  border-radius: 10px;
+  padding: 1vh;
+  text-align: center;
+  width: 15vw;
+  transition: all .3s;
+  font-size: 16px;
+  outline: none;
+  background-color: #aaa;
+}
+
+.search-box:focus {
+  width: 18vw;
+  background-color: #444;
+  outline: none;
+}
+
+.scroll-box {
+  margin-top: 3.7vh;
+  width: 20vw;
+  height: 80vh;
+  overflow: auto;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.4) inset;
+}
+
+.track-box {
+  border-radius: 10px;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+  width: 19vw;
+  height: 10vh;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* button reset */
+button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+}
+
+input {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+}
+
+.button-small {
+  width: 5vw;
+  height: 5vh;
+}
+
+.title-text {
+  margin-top: 2vh;
+  width: 8vw;
+  font-size: 3vh;
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  transition: all 0.5s ease;
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+.title-text:focus {
+  border-bottom: 2px solid rgba(0,0,0,0.8);
+  transition: 0.5s ;
+}
+
+.control-box {
+  position: relative;
+  text-align: right;
+  margin-right: 2vw;
+  margin-left: 48vw;
+  width: 50vw;
+}
+
+.control-button {
+  margin: 0;
+  padding: 0;
+  width: 5vw;
+  height: 8vh;
+  border: 1px;
+  font-size: 3vh;
+}
+
+.title-range {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
